@@ -1,0 +1,13 @@
+Spiderman|10|18|Tierra|Humano|
+Hulk|10|38|Tierra|Humano|
+Ironman|8|40|Robotz|Amanto|
+Black Widow|5|32|Ninja|Amanto|
+Captain America|6|110|Tierra|Humano|
+Superman|10|50|Nose|Amanto|
+Spiderman|10|18|Tierra|Humano|
+Hulk|10|38|Tierra|Humano|
+Ironman|8|40|Robotz|Amanto|
+Black Widow|5|32|Ninja|Amanto|
+Captain America|6|110|Tierra|Humano|
+Superman|10|50|Nose|Amanto|
+Jose Vargas|10|18|Tierra|Humano|
