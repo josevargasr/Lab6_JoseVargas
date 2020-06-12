@@ -47,7 +47,7 @@ public class Universo {
 
     @Override
     public String toString() {
-        return "Universo{" + "nombre=" + nombre + ", seresvivos=" + seresvivos + '}';
+        return nombre;
     }
     
     public void escribirArchivo() throws IOException{
