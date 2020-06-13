@@ -28,8 +28,32 @@ static int cont = 0;
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public Principal() throws IOException {
         initComponents();
+        universos.add(new Universo("MarvelUniverse"));
+        universos.add(new Universo("Unitec"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Spiderman", 9, 18, "Marte", "Humano"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Hulk", 5, 25, "Tierra", "Amanto"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Capitan A", 8, 19, "Jupiter", "Humano"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Black Widow", 10, 18, "Mercurio", "Amanto"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Jose Vargas", 2, 14, "Marte", "Humano"));
+        universos.get(0).getSeresvivos().add(new SerVivo("SuperMan", 6, 36, "Tierra", "Amanto"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Thor", 1, 10, "Saturno", "Humano"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Iron Man", 5, 150, "Marte", "Amanto"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Claudia", 6, 23, "Saturno", "Humano"));
+        universos.get(0).getSeresvivos().add(new SerVivo("Batman", 9, 29, "Tierra", "Amanto"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Hernan", 7, 38, "Mercurio", "Humano"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Monica", 10, 18, "Marte", "Amanto"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Leonardo", 2, 35, "Saturno", "Humano"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Clauida", 1, 70, "Jupiter", "Amanto"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Carlos", 8, 40, "Mercurio", "Humano"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Diego", 4, 65, "Tierra", "Amanto"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Miguel", 9, 32, "Saturno", "Humano"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Javier", 10, 17, "Jupiter", "Amanto"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Jose", 2, 25, "Marte", "Humano"));
+        universos.get(1).getSeresvivos().add(new SerVivo("Marco", 5, 45, "Tierra", "Amanto"));
+        universos.get(0).escribirArchivo();
+        universos.get(1).escribirArchivo();
     }
 
     /**
@@ -462,7 +486,7 @@ static int cont = 0;
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del universo: ");
         Universo u = new Universo(nombre);
         universos.add(u);
-        if(universos.size()>1){
+        if(universos.size()>3){
             cont++;
         }
         JOptionPane.showMessageDialog(this, "Se creó el universo con éxito");
@@ -522,6 +546,11 @@ static int cont = 0;
         }else{
             SerVivo sv = new SerVivo(tf_nombre1.getText(), Integer.parseInt(js_poder1.getValue().toString()), Integer.parseInt(tf_edad1.getText()), tf_planeta1.getText(), cb_raza1.getSelectedItem().toString());
             universos.get(pos_u).getSeresvivos().set(pos_sv, sv);
+            try {
+                universos.get(cont).escribirArchivo();
+            } catch (IOException ex) {
+                
+            }
             JOptionPane.showMessageDialog(this, "Se modificó el ser vivo con éxito");
             tf_nombre1.setText("");
             tf_edad1.setText("");
@@ -546,6 +575,12 @@ static int cont = 0;
         }
         pos_sv = Integer.parseInt(JOptionPane.showInputDialog(ser + "\n Ingrese la posicion del ser vivo:"));
         universos.get(pos_u).getSeresvivos().remove(pos_sv);
+    try {
+        universos.get(pos_u).escribirArchivo();
+    } catch (IOException ex) {
+        
+    }
+        
         JOptionPane.showMessageDialog(this, "Se eliminó el ser vivo con éxito");
         
     }//GEN-LAST:event_jMenuItem6ActionPerformed
@@ -580,7 +615,11 @@ static int cont = 0;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                try {
+                    new Principal().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

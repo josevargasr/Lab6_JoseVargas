@@ -1,13 +1,10 @@
-Spiderman|10|18|Tierra|Humano|
-Hulk|10|38|Tierra|Humano|
-Ironman|8|40|Robotz|Amanto|
-Black Widow|5|32|Ninja|Amanto|
-Captain America|6|110|Tierra|Humano|
-Superman|10|50|Nose|Amanto|
-Spiderman|10|18|Tierra|Humano|
-Hulk|10|38|Tierra|Humano|
-Ironman|8|40|Robotz|Amanto|
-Black Widow|5|32|Ninja|Amanto|
-Captain America|6|110|Tierra|Humano|
-Superman|10|50|Nose|Amanto|
-Jose Vargas|10|18|Tierra|Humano|
+Spider|4|34|Tierroza|Amanto|
+Hulk|5|25|Tierra|Amanto|
+Capitan A|8|19|Jupiter|Humano|
+Black Widow|10|18|Mercurio|Amanto|
+Jose Vargas|2|14|Marte|Humano|
+SuperMan|6|36|Tierra|Amanto|
+Thor|1|10|Saturno|Humano|
+Iron Man|5|150|Marte|Amanto|
+Claudia|6|23|Saturno|Humano|
+Batman|2|98|Gotham|Amanto|
